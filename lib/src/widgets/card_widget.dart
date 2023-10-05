@@ -33,7 +33,7 @@ class _CardInputWidgetState extends BaseState<CardInputWidget> {
           child: new Column(
             children: <Widget>[
               new Text(
-                'Please, provide valid card details.',
+                'Please, provide valid card details. You will be charged a one-time fee of N50.',
                 textAlign: TextAlign.center,
                 style: const TextStyle(fontWeight: FontWeight.w500),
               ),
