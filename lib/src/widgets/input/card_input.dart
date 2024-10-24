@@ -11,12 +11,13 @@ class CardInput extends StatefulWidget {
   final String buttonText;
   final PaymentCard? card;
   final ValueChanged<PaymentCard?> onValidated;
+   final Color? buttonColor;
 
   CardInput({
     Key? key,
     required this.buttonText,
     required this.card,
-    required this.onValidated,
+    required this.onValidated, this.buttonColor,
   }) : super(key: key);
 
   @override
@@ -100,7 +101,7 @@ class _CardInputState extends State<CardInput> {
               key: Key("PayButton"),
               onPressed: _validateInputs,
               text: widget.buttonText,
-              showProgress: _validated),
+              showProgress: _validated,buttonColor: widget.buttonColor,),
         ],
       ),
     );

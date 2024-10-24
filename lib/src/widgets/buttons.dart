@@ -5,6 +5,7 @@ class WhiteButton extends _BaseButton {
   final bool flat;
   final IconData? iconData;
   final bool bold;
+  final Color? textColor;
 
   WhiteButton({
     required VoidCallback? onPressed,
@@ -13,6 +14,7 @@ class WhiteButton extends _BaseButton {
     this.flat = false,
     this.bold = true,
     this.iconData,
+    this.textColor,
   }) : super(
           onPressed: onPressed,
           showProgress: false,
@@ -21,7 +23,7 @@ class WhiteButton extends _BaseButton {
           iconData: iconData,
           textStyle: new TextStyle(
               fontSize: 14.0,
-              color: Colors.black87.withOpacity(0.8),
+              color: textColor ?? Colors.black87.withOpacity(0.8),
               fontWeight: bold ? FontWeight.bold : FontWeight.normal),
           color: Colors.white,
           borderSide: flat
@@ -34,12 +36,14 @@ class AccentButton extends StatelessWidget {
   final VoidCallback onPressed;
   final String text;
   final bool showProgress;
+  final Color? buttonColor;
 
   AccentButton({
     Key? key,
     required this.onPressed,
     required this.text,
     this.showProgress = false,
+    this.buttonColor
   }) : super(key: key);
 
   @override
@@ -47,10 +51,10 @@ class AccentButton extends StatelessWidget {
     return _BaseButton(
       onPressed: onPressed,
       showProgress: showProgress,
-      color: context.colorScheme().secondary,
+      color:buttonColor ?? context.colorScheme().secondary,
       borderSide: BorderSide.none,
       textStyle: const TextStyle(
-          fontSize: 14.0, color: Colors.white, fontWeight: FontWeight.bold),
+          fontSize: 16.0, color: Colors.white, fontWeight: FontWeight.bold),
       text: text,
     );
   }
