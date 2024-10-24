@@ -15,7 +15,7 @@ class NumberField extends BaseTextField {
       required Widget suffix})
       : super(
           key: key,
-          labelText: 'CARD NUMBER',
+          labelText: 'Card Number',
           hintText: '0000 0000 0000 0000',
           controller: controller,
           onSaved: onSaved,

@@ -26,18 +26,19 @@ class _CardInputWidgetState extends BaseState<CardInputWidget> {
   @override
   Widget buildChild(BuildContext context) {
     return new CustomAlertDialog(
-      title:   new Text(
-                'Add a New Card',
-                textAlign: TextAlign.center,
-                style: const TextStyle(fontWeight: FontWeight.w700,fontSize: 16),
-              ),
+      title: new Text(
+        'Add a New Card',
+        textAlign: TextAlign.center,
+        style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
+      ),
+      titlePadding: EdgeInsets.all(12),
+      fullscreen: true,
       content: new SingleChildScrollView(
         child: new Container(
           padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
           alignment: Alignment.center,
           child: new Column(
             children: <Widget>[
-             
               new Text(
                 'Please provide valid card details. You will be charged a one-time fee of N50.',
                 textAlign: TextAlign.center,

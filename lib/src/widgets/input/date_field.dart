@@ -13,7 +13,7 @@ class DateField extends BaseTextField {
     required FormFieldSetter<String> onSaved,
   }) : super(
           key: key,
-          labelText: 'CARD EXPIRY',
+          labelText: 'Card Expiry',
           hintText: 'MM/YY',
           validator: validateDate,
           initialValue: _getInitialExpiryMonth(card),
