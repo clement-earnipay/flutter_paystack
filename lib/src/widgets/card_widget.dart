@@ -32,7 +32,7 @@ class _CardInputWidgetState extends BaseState<CardInputWidget> {
         style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
       ),
       titlePadding: EdgeInsets.all(12),
-      fullscreen: true,
+      fullscreen: false,
       content: new SingleChildScrollView(
         child: new Container(
           padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
